@@ -1,15 +1,23 @@
 import "./style.css";
 
-const Tasks = (props) => (
-    <ul className="section__list">
-    {props.tasks.map(task => (
-        <li className="list__items">
-            <button className="list__button list__button--done">{task.done ? "&#10004" : ""}</button>
-            <span className={`${task.done ? "style=\"text-decoration: line-through\"" : ""}`}>{task.content}</span>
-            <button className="list__button--delete">🗑</button>
-        </li>
+const Tasks = ({ tasks, hideDoneTasks}) => (
+  <ul className="tasks">
+    {tasks.map(task => (
+    <li className={`tasks__item${task.done && hideDoneTasks ? "tasks__item--hidden" : ""}`}
+        key={task.id}>  
+            <button className="tasks__button tasks__button--toggleDone">
+                {task.done ? "✔" : ""}
+            </button>
+            <span className={`tasks__content"${task.done ? "tasks__content--done" : ""}`}
+            >
+                {task.content} 
+            </span>
+            <button className="tasks__button tasks__button--remove">
+                🗑
+            </button>
+    </li>
     ))}
-    </ul>
+  </ul>
 );
 
 export default Tasks;

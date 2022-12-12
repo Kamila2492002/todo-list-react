@@ -1,34 +1,26 @@
-.buttons__button {
+.buttons {
     display: flex;
     flex-wrap: wrap;
-    border: none;
-    color: hsl(180, 100%, 25%);
-    border-radius:  5px;
-    padding: 10px;
-    transition: 0.5s;
-    gap: 20px;
-    align-items: center;
-    justify-content: flex-end;
-    border-bottom: 1px solid lightgray;
-    margin: none;
 }
 
-@media(max-width:767px) {
+.buttons__button {
+    margin: 0 0 0 20px;
+    color: teal;
+    background: transparent;
+    border: none;
+}
+
+@media (max-width: 767px) {
     .buttons__button {
-        flex-direction: column;
+        flex-basis: 100%;
+        margin: 10px;
     }
 }
 
-
 .buttons__button:hover {
-    color: hsl(180, 100%, 35%)
+    color: hsl(180, 100%, 35%);
 }
 
-.buttons__button:active {
-    color: hsl(180, 100%, 20%)
-}
-
-.buttons__button.buttons__buttons:disabled {
-    color: #ddd;
-    cursor: not-allowed;
+.buttons__button:disabled {
+    color: #ccc;
 }

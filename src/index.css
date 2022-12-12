@@ -7,18 +7,7 @@ html {
   box-sizing: inherit;
 }
 
-.body {
-  max-width: 1000px;
+body {
   font-family: "Montserrat", sans-serif;
   background-color: #eee;
-  margin: 30px auto;
-  color: #292929;
-  word-break: break-word;
-}
-
-@media (max-width: 767px) {
-  .body {
-      grid-template-columns: 1fr;
-      padding: 10px;
-  }
 }
