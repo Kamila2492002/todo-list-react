@@ -1,6 +1,6 @@
  const hello = () => {
     console.log("Cześć!");
 }
-const name = "kamila";
+const name = "Kamila";
 
 export { hello, name }; 
