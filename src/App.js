@@ -23,7 +23,7 @@ function App() {
 
   const toggleTaskDone = (id) => {
     setTasks(tasks => tasks.map(task => {
-      if(task.id ===id) {
+      if(task.id === id) {
         return { ...task, done: !task.done };
       }
 
@@ -44,7 +44,7 @@ function App() {
     {
       content,
       done: false, 
-      id: tasks.length ===0 ? 1 : tasks[tasks.length - 1].id + 1, 
+      id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1, 
     },
     ]);
   };
