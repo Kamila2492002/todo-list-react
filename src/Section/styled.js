@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SectionNewTask = styled.section`
+export const SectionWrapper= styled.section`
     margin: 10px 0;
     background: white;
     box-shadow: 0 0 5px #ddd;

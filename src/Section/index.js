@@ -1,7 +1,7 @@
-import { SectionNewTask, Header, Title, Body } from "./styled";
+import { SectionWrapper, Header, Title, Body } from "./styled";
 
 const Section = ({ title, body, extraHeaderContent }) => (
-    <SectionNewTask>
+    <SectionWrapper>
         <Header>
             <Title>{title}</Title>
             {extraHeaderContent}
@@ -9,7 +9,7 @@ const Section = ({ title, body, extraHeaderContent }) => (
         <Body>
             {body}
         </Body>   
-    </SectionNewTask>
+    </SectionWrapper>
 );
 
 export default Section;
