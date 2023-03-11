@@ -20,7 +20,7 @@ export const Button =  styled.button`
         color: hsl(180, 100%, 35%);
     }
 
-&:disabled {
+    &:disabled {
     color: #ccc;
-}
+    }
 `; 
