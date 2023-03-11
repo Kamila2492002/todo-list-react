@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTasks } from './useTasks';
 import Form from "./Form";
 import Tasks from "./Tasks";
