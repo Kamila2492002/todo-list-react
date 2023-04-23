@@ -33,7 +33,6 @@ function Tasks() {
         body={ 
           <TaskList 
           removeTask={removeTask}
-          toggleTaskDone={toggleTaskDone}
           />
         }
         extraHeaderContent={
