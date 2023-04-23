@@ -13,6 +13,14 @@ My app helps you remember the most important things to do during the day.
 - GIT
 - BEM convention
 - CSS
+- ES6+ features
+- Normalize
+- React
+- Immutability
+- Local storage
+- Styled Components
+- Custom Hooks
+- Redux
 
 
 ## Getting Started with Create React App
