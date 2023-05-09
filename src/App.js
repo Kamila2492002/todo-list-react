@@ -3,6 +3,8 @@ import { HashRouter, Link, Switch, Route, Redirect } from "react-router-dom/cjs/
 import TasksPage from "./features/tasks/TasksPage";
 import TaskPage from "./features/tasks/TaskPage";
 import AuthorPage from "./features/author/AuthorPage";
+import { toAuthor, toTask, toTasks } from "./routes";
+
 
 const App = () => (
     <HashRouter>
@@ -16,17 +18,17 @@ const App = () => (
             </li>
         </ul>
         <Switch>
-            <Route path="/zadania/:id">
+            <Route path={toTask()}>
                 <TaskPage />
             </Route>
-            <Route path="/zadania">
+            <Route path={toTasks()}>
                 <TasksPage />
             </Route>
-            <Route path="/autor">
+            <Route path={toAuthor()}>
                 <AuthorPage />
             </Route>
             <Route path="/">
-                <Redirect to="/zadania" />
+                <Redirect to={toTasks()} />
             </Route>
         </Switch>
     </nav>
