@@ -7,7 +7,6 @@ import Container from "../../../common/Container";
 import { ExampleTasksButton } from "./Buttons/ExampleTasksButton";
 
 function TasksPage() {
-
   return (
   <Container>
     <Header title="Lista zadań" />

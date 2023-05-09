@@ -9,7 +9,7 @@ const TaskList = () => {
 
   return (
     <List>
-      {tasks.map(task => (
+      {tasks.map((task) => (
       <Item 
         key={task.id}
         hidden={task.done && hideDone}
