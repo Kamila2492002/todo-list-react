@@ -3,7 +3,7 @@ import { getTasksFromLocalStorage } from './tasksLocalStorage';
 
 
 const tasksSlice = createSlice({
-    name: 'tasks',
+    name: "tasks",
     initialState: {
         tasks: getTasksFromLocalStorage(),
         hideDone: false,
@@ -62,7 +62,7 @@ export const selectTasksByQuery = (state, query) => {
     }
 
     return selectTasks(state).filter(({ content }) => 
-    content.toUpperCase().includes(query.trim().toupperCase()));
+    content.toUpperCase().includes(query.trim().toUpperCase()));
 }
     
 

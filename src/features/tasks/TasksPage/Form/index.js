@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { StyledForm, Button } from "./styled";
 import { addTask } from "../../tasksSlice";
 import { nanoid } from "@reduxjs/toolkit";
-import Input from "../../Input";
+import Input from "../../Input/index";
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
@@ -37,7 +37,7 @@ const Form = () => {
             placeholder="Co jest do zrobienia?" 
             onChange={({ target }) => setNewTaskContent(target.value)}
         />
-        <Button>Dodaj zadanie</Button>
+        <Button onClick={() => inputRef.current.focus()}>Dodaj zadanie</Button>
     </StyledForm>
     )
 };

@@ -20,7 +20,9 @@ My app helps you remember the most important things to do during the day.
 - Local storage
 - Styled Components
 - Custom Hooks
-- Redux
+- Redux Toolkit
+- Redux Saga
+- Redux Router
 
 
 ## Getting Started with Create React App
