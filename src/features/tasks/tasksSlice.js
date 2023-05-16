@@ -13,7 +13,7 @@ const tasksSlice = createSlice({
         addTask: ({ tasks }, { payload: newTask }) => {
             tasks.push(newTask);
         },
-        toggleHideDone: state => {
+        toggleHideDone: (state) => {
             state.hideDone = !state.hideDone;
         },
         toggleTaskDone: ({ tasks }, { payload: selectedTaskId }) => {
