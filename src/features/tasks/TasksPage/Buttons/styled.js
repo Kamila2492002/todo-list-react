@@ -10,10 +10,14 @@ export const Button =  styled.button`
     color: teal;
     background: transparent;
     border: none;
+    transition: color 0.3s;
+    cursor: pointer;
 
     @media (max-width: 767px) {
         flex-basis: 100%;
-        margin: 10px;
+        margin: 5px;
+        justify-content: center;
+        padding-bottom: 20px;
     }
 
     &:hover {

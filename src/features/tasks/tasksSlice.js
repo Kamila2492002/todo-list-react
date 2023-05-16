@@ -30,8 +30,12 @@ const tasksSlice = createSlice({
         fetchExampleTasks: (state) => {
             state.loading = true;
         },
-        setTasks: (state, { payload: tasks }) => {
+        fetchExampleTasksSuccess: (state, { payload: tasks }) => {
             state.tasks = tasks;
+            state.loading = false;
+        },
+        fetchExampleTasksError: (state) => {
+            state.loading = false;
         },
     },
 });
@@ -43,14 +47,17 @@ export const {
     removeTask, 
     setAllDone,
     fetchExampleTasks,
-    setTasks,
+    fetchExampleTasksSuccess,
+    fetchExampleTasksError,
 } = tasksSlice.actions;
 
-const selectTasksState = state => state.tasks;
+const selectTasksState = (state) => state.tasks;
 
-export const selectTasks = state => selectTasksState(state).tasks;
-export const selectHideDone = state => selectTasksState(state).hideDone;
-export const selectLoadingTasks = (state) => selectTasks(state).loading;
+export const selectTasks = (state )=> selectTasksState(state).tasks;
+export const selectHideDone = (state )=> selectTasksState(state).hideDone;
+export const selectLoadingTasks = (state) => selectTasks(state).loading === true;
+export const selectTasksEmpty = (state) => selectTasks(state).length === 0;
+export const selectTasksDone = (state) => selectTasks(state).every(({ done }) => done);
 
 export const getTaskById = (state, taskId) => 
     selectTasks(state).find(({ id }) => id === taskId);
@@ -62,9 +69,8 @@ export const selectTasksByQuery = (state, query) => {
         return tasks;
     }
 
-    return selectTasks(state).filter(({ content }) => 
+    return tasks.filter(({ content }) => 
     content.toUpperCase().includes(query.trim().toUpperCase()));
 }
-    
 
 export default tasksSlice.reducer;

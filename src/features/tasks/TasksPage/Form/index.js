@@ -34,8 +34,11 @@ const Form = () => {
         <StyledForm onSubmit={onFormSubmit}>
         <Input
             value={newTaskContent} 
+            type = "text"
+            ref= {inputRef}
             placeholder="Co jest do zrobienia?" 
             onChange={({ target }) => setNewTaskContent(target.value)}
+            autoFocus
         />
         <Button onClick={() => inputRef.current.focus()}>Dodaj zadanie</Button>
     </StyledForm>
