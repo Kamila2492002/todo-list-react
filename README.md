@@ -1,5 +1,5 @@
 # Todo-List-React App
-![OphenGraph.jpg](https://zapodaj.net/199edbb860c65.jpg.html)
+![OphenGraph.jpg](https://files.fm/u/fqh9tmq2u)
 
 ## Demo 
 [My to do List](https://kamila2492002.github.io/todo-list-react/)
