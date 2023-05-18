@@ -55,7 +55,7 @@ const selectTasksState = (state) => state.tasks;
 
 export const selectTasks = (state )=> selectTasksState(state).tasks;
 export const selectHideDone = (state )=> selectTasksState(state).hideDone;
-export const selectLoadingTasks = (state) => selectTasks(state).loading === true;
+export const selectLoadingTasks = (state) => selectTasksState(state).loading === true;
 export const selectTasksEmpty = (state) => selectTasks(state).length === 0;
 export const selectTasksDone = (state) => selectTasks(state).every(({ done }) => done);
 
