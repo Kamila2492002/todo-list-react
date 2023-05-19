@@ -10,7 +10,23 @@ export const Nav = styled.nav`
     justify-content: center;
 `;
 
-export const ListItem = styled.li`
+export const NavList = styled.ul`
+    padding: 0px;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    @media (max-width: 767px) {
+        gap: 3px;
+        flex-direction: column;
+    }
+`;
+
+export const NavItem = styled.li`
     padding: 20px;
     cursor: pointer;
     transition: 0.5s;
@@ -29,6 +45,14 @@ export const StyledNavLink = styled(NavLink)`
 
     &:active {
         color: white;
+        text-decoration: underline;
+    }
+
+    &:hover {
+        border-bottom: 1px solid;
+    }
+
+    &:focus-within {
         font-weight: 700;
     }
 `;
